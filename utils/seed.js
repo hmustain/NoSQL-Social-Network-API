@@ -14,7 +14,7 @@ connection.once('open', async () => {
     // Create new users and thoughts
     const createdUsers = await User.insertMany(users);
     const thoughtsWithUsers = thoughts.map(thought => {
-      const user = createdUsers.find(user => user.username === thought.username);
+      const user = createdUsers.find(user => user.username === thought.username)._id;
       return { ...thought, username: user._id };
     });
     await Thought.insertMany(thoughtsWithUsers);
