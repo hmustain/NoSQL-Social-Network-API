@@ -18,5 +18,12 @@ getThoughtById({ params }, res) {
         return res.json(thought);
     })
     .catch((err) => res.status(400).json(err));
-}
+},
+
+// Create Thought
+createThought({ body }, res) {
+    Thought.create(body)
+        .then((thought) => res.json(thought))
+        .catch((err) => res.status(400).json(err));
+},
 };
