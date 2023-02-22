@@ -1,5 +1,5 @@
 const { time } = require('console');
-const { Schema, model } = require('mongoose')
+const { Schema, model, Types } = require('mongoose')
 
 // Create a reaction schema
 const reactionSchema = new Schema (
