@@ -1,0 +1,30 @@
+{
+  "name": "nosql-social-network-api",
+  "version": "1.0.0",
+  "description": "mongoose back-end project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index",
+    "seed": "node utils/seed",
+    "heroku-postbuild": "node utils/seed.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.13"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hmustain/NoSQL-Social-Network-API.git"
+  },
+  "keywords": [],
+  "author": "Hunter Mustain",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hmustain/NoSQL-Social-Network-API/issues"
+  },
+  "homepage": "https://github.com/hmustain/NoSQL-Social-Network-API#readme"
+}
