@@ -38,4 +38,16 @@ updateThought({ params, body }, res) {
       })
       .catch((err) => res.status(400).json(err));
   },
+
+// Delete a Thought by Id
+deleteThought({ params }, res) {
+    Thought.findOneAndDelete({ _id: params.id })
+      .then((thought) => {
+        if (!thought) {
+          return res.status(404).json({ message: 'No thought with this id!' });
+        }
+        return res.json(thought);
+      })
+      .catch((err) => res.status(400).json(err));
+  },
 };
