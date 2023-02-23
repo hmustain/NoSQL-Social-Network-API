@@ -56,5 +56,5 @@ N/A
 
 ## Questions
 If you have questions and would like to email me please email me @ hunter@bunkerbranding.com <br>
-My GitHub user name and link to my profile can be found by clicking my username <a href="www.github.com/hmustain">hmustain</a>
+My GitHub user name and link to my profile can be found by clicking my username <a href="https://github.com/hmustain">hmustain</a>
 
