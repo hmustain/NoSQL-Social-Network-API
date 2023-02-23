@@ -12,7 +12,6 @@ This is a backend project aimed at gaining experiencing using non-structured dat
 - [Credits](#credits)
 - [Contributing](#contributing)
 - [License](#license)
-- [Tests](#tests)
 - [Questions](#questions)
 
 ## Installation
@@ -50,9 +49,6 @@ Copyright 2022 Hunter Mustain
         THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 https://opensource.org/licenses/MIT
         
-
-## Tests
-N/A
 
 ## Questions
 If you have questions and would like to email me please email me @ hunter@bunkerbranding.com <br>
