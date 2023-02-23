@@ -3,7 +3,7 @@
         
 
 ## Description
-This is a backend project aimed at gaining experiencing using non-structured databases (NOSQL). This project uses MongoDB and mongoose. In this project, we are challenged to build an API for a social network web application where users can share their thoguhts, react to friends' thoughts, and create a friend list.
+This is a backend project aimed at gaining experiencing using non-structured databases (NOSQL). This project uses MongoDB and mongoose. In this project, we are challenged to build an API for a social network web application where users can share their thoughts, react to friends' thoughts, and create a friend list.
 
 ## Table of Contents
 
