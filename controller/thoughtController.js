@@ -1,4 +1,4 @@
-const { Thought } = require('../models');
+const { Thought, User } = require('../models');
 
 module.exports = {
     // GET all thoughts
@@ -23,8 +23,12 @@ getThoughtById({ params }, res) {
 // Create Thought
 createThought({ body }, res) {
     Thought.create(body)
-        .then((thought) => res.json(thought))
-        .catch((err) => res.status(400).json(err));
+        .then(async(thought) => {
+          await User.findOneAndUpdate({ username: thought.username }, {
+            $addToSet: { thoughts: thought._id }
+          }, { runValidators: true, new: true})
+          res.json(thought)})
+        // .catch((err) => res.status(400).json(err));
 },
 
 // Update a Thought by id

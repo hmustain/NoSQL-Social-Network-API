@@ -1,4 +1,4 @@
-const { User } = require('../models');
+const { User, Thought} = require('../models');
 
 module.exports = {
     // Get all users
@@ -50,6 +50,21 @@ module.exports = {
           return res.json(user);
         })
         .catch((err) => res.status(400).json(err));
+    },
+
+    // Delete user's associated thoughts when user is delete (BONUS)
+    deleteUserThoughts({ params }, res) {
+      User.findOne({ _id: params.id })
+      .then(async(user) => {
+        user.thoughts.forEach(async thoughtId => { 
+          await Thought.findOneAndDelete({ _id: thoughtId})
+        }) 
+        user = await User.findOneAndDelete({ _id: params.id})
+        if (!user) {
+          return res.status(404).json({ message: 'No user with this id!' });
+        }
+        return res.json(user);
+      })
     },
   
     // Add a friend to a user's friend list
