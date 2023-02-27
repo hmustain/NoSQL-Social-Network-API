@@ -8,7 +8,6 @@ const {
     deleteUser,
     addFriend,
     deleteFriend,
-    deleteUserThoughts,
 } = require('../../controller/userController');
 
 
@@ -22,7 +21,7 @@ router.route('/').get(getAllUsers).post(createUser);
 router.route('/:id').get(getUserById).put(updateUser).delete(deleteUser);
 
 // delete user thoughts when user is deleted (bonus)
-router.route('/:id/thoughts').delete(deleteUserThoughts);
+// router.route('/:id/thoughts').delete(deleteUserThoughts);
 
 
 //  /api/users/:userId/friends/:friendsId

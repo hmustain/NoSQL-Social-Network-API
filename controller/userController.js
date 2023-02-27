@@ -40,9 +40,20 @@ module.exports = {
       },
       
   
-    // Delete a user by id
-    deleteUser({ params }, res) {
-      User.findOneAndDelete({ _id: params.id })
+// Delete a user by id and their associated thoughts
+deleteUser({ params }, res) {
+  User.findOne({ _id: params.id })
+    .then((user) => {
+      if (!user) {
+        return res.status(404).json({ message: 'No user with this id!' });
+      }
+
+      // Delete user's thoughts
+      Thought.deleteMany({ username: user.username })
+        .then(() => {
+          // Delete user
+          return User.findOneAndDelete({ _id: params.id });
+        })
         .then((user) => {
           if (!user) {
             return res.status(404).json({ message: 'No user with this id!' });
@@ -50,22 +61,10 @@ module.exports = {
           return res.json(user);
         })
         .catch((err) => res.status(400).json(err));
-    },
+    })
+    .catch((err) => res.status(400).json(err));
+},
 
-    // Delete user's associated thoughts when user is delete (BONUS)
-    deleteUserThoughts({ params }, res) {
-      User.findOne({ _id: params.id })
-      .then(async(user) => {
-        user.thoughts.forEach(async thoughtId => { 
-          await Thought.findOneAndDelete({ _id: thoughtId})
-        }) 
-        user = await User.findOneAndDelete({ _id: params.id})
-        if (!user) {
-          return res.status(404).json({ message: 'No user with this id!' });
-        }
-        return res.json(user);
-      })
-    },
   
     // Add a friend to a user's friend list
     addFriend({ params, body }, res) {
