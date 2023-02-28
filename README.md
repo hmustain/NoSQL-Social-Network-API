@@ -30,6 +30,12 @@ Mongoose
 ## Usage
 To use this application, first seed your data by running `npm run seed`, then start your server by running `npm start`.
 
+### User Demonstration <br>
+https://www.loom.com/share/625c62fdd9cd4af89c9c2d39a2e5a3ee
+
+### Thoughts Demonstration <br>
+https://www.loom.com/share/5df68009f5b34c33b537c72f7508fb87
+
 ## Credits
 Hunter Mustain, Instructor & TAs, as well as ASK bcs and Tutor
 
